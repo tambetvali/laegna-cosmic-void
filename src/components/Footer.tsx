@@ -1,4 +1,5 @@
 import { Github, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -6,7 +7,7 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto space-y-12">
           {/* Main Footer Content */}
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-4 gap-8">
             {/* About */}
             <div className="space-y-4">
               <h3 className="text-xl font-bold">
@@ -16,6 +17,45 @@ export const Footer = () => {
                 A mathematical framework bridging material and spiritual realms through 
                 quantitative infinities, octave-based coordinate systems, and harmonic balance.
               </p>
+            </div>
+
+            {/* Explore More */}
+            <div className="space-y-4">
+              <h4 className="font-semibold">Explore More</h4>
+              <ul className="space-y-3 text-sm">
+                <li>
+                  <Link
+                    to="/background"
+                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    Historical Background
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/analysis"
+                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    Scientific Analysis
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/implications"
+                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    Implications & Applications
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/vision"
+                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    Future Vision
+                  </Link>
+                </li>
+              </ul>
             </div>
 
             {/* Key Repositories */}
