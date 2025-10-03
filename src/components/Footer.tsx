@@ -1,9 +1,13 @@
 import { Github, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
-export const Footer = () => {
+interface FooterProps {
+  variant?: "static" | "fixed";
+}
+
+export const Footer = ({ variant = "static" }: FooterProps) => {
   return (
-    <footer className="py-16 border-t border-border bg-muted/20">
+    <footer className={`py-16 border-t border-border bg-muted/20 ${variant === "fixed" ? "fixed bottom-0 left-0 right-0 z-40" : ""}`}>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto space-y-12">
           {/* Main Footer Content */}

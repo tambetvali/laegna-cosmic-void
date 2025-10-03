@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 const Vision = () => {
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      <main className="pt-24 pb-16">
+    <div className="min-h-screen pb-[400px]">
+      <Navigation variant="static" />
+      <main className="pt-8 pb-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Back Navigation */}
@@ -15,8 +15,8 @@ const Vision = () => {
               to="/"
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
             >
-              <ArrowLeft className="w-4 h-4" />
               <span className="text-sm">Back to Main</span>
+              <ArrowLeft className="w-4 h-4" />
             </Link>
 
             {/* Header */}
@@ -289,7 +289,7 @@ const Vision = () => {
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer variant="fixed" />
     </div>
   );
 };
