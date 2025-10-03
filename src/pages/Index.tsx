@@ -13,21 +13,20 @@ const Index = () => {
       <Navigation variant="fixed" />
       <main>
         <Hero />
+        <QuantitativeInfinities />
+        <CoreTheorems />
+        <AllTheorems />
         
-        {/* Forth to Stub Navigation */}
+        {/* Forth to Stub Navigation - Bottom Right */}
         <div className="container mx-auto px-4 py-8 flex justify-end">
           <Link
             to="/background"
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
           >
-            <span className="text-sm">Forth to Stub</span>
             <ArrowRight className="w-4 h-4" />
+            <span className="text-sm">Forth to Stub</span>
           </Link>
         </div>
-
-        <QuantitativeInfinities />
-        <CoreTheorems />
-        <AllTheorems />
       </main>
       <Footer variant="static" />
     </div>
