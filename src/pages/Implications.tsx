@@ -1,6 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { ArrowLeft, Atom, Zap, Cpu, Microscope, Globe, Brain } from "lucide-react";
+import { ArrowLeft, Atom, Zap, Cpu, Microscope, Globe, Brain, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Implications = () => {
@@ -259,6 +259,17 @@ const Implications = () => {
               </section>
             </div>
           </div>
+        </div>
+
+        {/* Forthworthy Navigation - Bottom Right */}
+        <div className="container mx-auto px-4 py-8 flex justify-end">
+          <Link
+            to="/vision"
+            className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+          >
+            <span className="text-sm">Forthworthy</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </main>
       <Footer variant="fixed" />

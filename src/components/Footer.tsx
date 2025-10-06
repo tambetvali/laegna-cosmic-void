@@ -1,11 +1,12 @@
 import { Github, ExternalLink } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 interface FooterProps {
   variant?: "static" | "fixed";
 }
 
 export const Footer = ({ variant = "static" }: FooterProps) => {
+  const location = useLocation();
   return (
     <footer className={`py-16 border-t border-border ${variant === "fixed" ? "fixed bottom-0 left-0 right-0 z-40 bg-background" : "bg-muted/20"}`}>
       <div className="container mx-auto px-4">
@@ -30,7 +31,11 @@ export const Footer = ({ variant = "static" }: FooterProps) => {
                 <li>
                   <Link
                     to="/background"
-                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                    className={`flex items-center gap-2 transition-colors ${
+                      location.pathname === "/background" 
+                        ? "text-primary font-semibold" 
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
                   >
                     Historical Background
                   </Link>
@@ -38,7 +43,11 @@ export const Footer = ({ variant = "static" }: FooterProps) => {
                 <li>
                   <Link
                     to="/analysis"
-                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                    className={`flex items-center gap-2 transition-colors ${
+                      location.pathname === "/analysis" 
+                        ? "text-primary font-semibold" 
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
                   >
                     Scientific Analysis
                   </Link>
@@ -46,7 +55,11 @@ export const Footer = ({ variant = "static" }: FooterProps) => {
                 <li>
                   <Link
                     to="/implications"
-                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                    className={`flex items-center gap-2 transition-colors ${
+                      location.pathname === "/implications" 
+                        ? "text-primary font-semibold" 
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
                   >
                     Implications & Applications
                   </Link>
@@ -54,7 +67,11 @@ export const Footer = ({ variant = "static" }: FooterProps) => {
                 <li>
                   <Link
                     to="/vision"
-                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                    className={`flex items-center gap-2 transition-colors ${
+                      location.pathname === "/vision" 
+                        ? "text-primary font-semibold" 
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
                   >
                     Future Vision
                   </Link>
