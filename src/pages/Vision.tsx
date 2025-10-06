@@ -21,7 +21,7 @@ const Vision = () => {
 
             {/* Header */}
             <div className="space-y-6 mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold">
+              <h1 id="title" className="text-4xl md:text-5xl font-bold">
                 Future <span className="gradient-text">Vision</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">

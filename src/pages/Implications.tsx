@@ -21,7 +21,7 @@ const Implications = () => {
 
             {/* Header */}
             <div className="space-y-6 mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold">
+              <h1 id="title" className="text-4xl md:text-5xl font-bold">
                 Implications & <span className="gradient-text">Applications</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">

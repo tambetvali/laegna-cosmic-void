@@ -26,11 +26,11 @@ export const Footer = ({ variant = "static" }: FooterProps) => {
 
             {/* Explore More */}
             <div className="space-y-4">
-              <h4 className="font-semibold">Explore More</h4>
+              <h4 className={`font-semibold transition-colors ${location.pathname !== "/" ? "text-primary" : ""}`}>Explore More</h4>
               <ul className="space-y-3 text-sm">
                 <li>
-                  <Link
-                    to="/background"
+                  <a
+                    href="/background#title"
                     className={`flex items-center gap-2 transition-colors ${
                       location.pathname === "/background" 
                         ? "text-primary font-semibold" 
@@ -38,11 +38,11 @@ export const Footer = ({ variant = "static" }: FooterProps) => {
                     }`}
                   >
                     Historical Background
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
-                    to="/analysis"
+                  <a
+                    href="/analysis#title"
                     className={`flex items-center gap-2 transition-colors ${
                       location.pathname === "/analysis" 
                         ? "text-primary font-semibold" 
@@ -50,11 +50,11 @@ export const Footer = ({ variant = "static" }: FooterProps) => {
                     }`}
                   >
                     Scientific Analysis
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
-                    to="/implications"
+                  <a
+                    href="/implications#title"
                     className={`flex items-center gap-2 transition-colors ${
                       location.pathname === "/implications" 
                         ? "text-primary font-semibold" 
@@ -62,11 +62,11 @@ export const Footer = ({ variant = "static" }: FooterProps) => {
                     }`}
                   >
                     Implications & Applications
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
-                    to="/vision"
+                  <a
+                    href="/vision#title"
                     className={`flex items-center gap-2 transition-colors ${
                       location.pathname === "/vision" 
                         ? "text-primary font-semibold" 
@@ -74,7 +74,7 @@ export const Footer = ({ variant = "static" }: FooterProps) => {
                     }`}
                   >
                     Future Vision
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>

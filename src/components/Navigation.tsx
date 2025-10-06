@@ -33,6 +33,13 @@ export const Navigation = ({ variant = "fixed" }: NavigationProps) => {
       const sections = ["infinities", "theorems", "all-theorems"];
       const scrollPosition = window.scrollY + 200;
 
+      // Check if we're at Hero section (before infinities)
+      const infinitiesElement = document.getElementById("infinities");
+      if (infinitiesElement && scrollPosition < infinitiesElement.offsetTop) {
+        setActiveSection("hero");
+        return;
+      }
+
       for (const sectionId of sections) {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -56,8 +63,8 @@ export const Navigation = ({ variant = "fixed" }: NavigationProps) => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-8">
             <h1 className="text-2xl font-bold">
-              <span className="text-primary">Laegna</span>
-              <span className="text-muted-foreground"> Theory</span>
+              <span className={`transition-colors ${activeSection === "hero" ? "text-purple-600" : "text-primary"}`}>Laegna</span>
+              <span className={`transition-colors ${activeSection === "hero" ? "text-primary" : "text-muted-foreground"}`}> Theory</span>
             </h1>
             <div className="hidden md:flex items-center gap-6">
               <button
