@@ -63,7 +63,7 @@ export const Navigation = ({ variant = "fixed" }: NavigationProps) => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-8">
             <h1 className="text-2xl font-bold">
-              <span className={`transition-colors ${activeSection === "hero" ? "text-purple-600" : "text-primary"}`}>Laegna</span>
+              <span className={`transition-colors ${activeSection === "hero" ? "text-[#8B6914]" : "text-primary"}`}>Laegna</span>
               <span className={`transition-colors ${activeSection === "hero" ? "text-primary" : "text-muted-foreground"}`}> Theory</span>
             </h1>
             <div className="hidden md:flex items-center gap-6">

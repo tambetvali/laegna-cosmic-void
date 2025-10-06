@@ -29,8 +29,13 @@ export const Footer = ({ variant = "static" }: FooterProps) => {
               <h4 className={`font-semibold transition-colors ${location.pathname !== "/" ? "text-primary" : ""}`}>Explore More</h4>
               <ul className="space-y-3 text-sm">
                 <li>
-                  <a
-                    href="/background#title"
+                  <Link
+                    to="/background"
+                    onClick={() => {
+                      setTimeout(() => {
+                        document.getElementById("title")?.scrollIntoView({ behavior: "instant" });
+                      }, 0);
+                    }}
                     className={`flex items-center gap-2 transition-colors ${
                       location.pathname === "/background" 
                         ? "text-primary font-semibold" 
@@ -38,11 +43,16 @@ export const Footer = ({ variant = "static" }: FooterProps) => {
                     }`}
                   >
                     Historical Background
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/analysis#title"
+                  <Link
+                    to="/analysis"
+                    onClick={() => {
+                      setTimeout(() => {
+                        document.getElementById("title")?.scrollIntoView({ behavior: "instant" });
+                      }, 0);
+                    }}
                     className={`flex items-center gap-2 transition-colors ${
                       location.pathname === "/analysis" 
                         ? "text-primary font-semibold" 
@@ -50,11 +60,16 @@ export const Footer = ({ variant = "static" }: FooterProps) => {
                     }`}
                   >
                     Scientific Analysis
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/implications#title"
+                  <Link
+                    to="/implications"
+                    onClick={() => {
+                      setTimeout(() => {
+                        document.getElementById("title")?.scrollIntoView({ behavior: "instant" });
+                      }, 0);
+                    }}
                     className={`flex items-center gap-2 transition-colors ${
                       location.pathname === "/implications" 
                         ? "text-primary font-semibold" 
@@ -62,11 +77,16 @@ export const Footer = ({ variant = "static" }: FooterProps) => {
                     }`}
                   >
                     Implications & Applications
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/vision#title"
+                  <Link
+                    to="/vision"
+                    onClick={() => {
+                      setTimeout(() => {
+                        document.getElementById("title")?.scrollIntoView({ behavior: "instant" });
+                      }, 0);
+                    }}
                     className={`flex items-center gap-2 transition-colors ${
                       location.pathname === "/vision" 
                         ? "text-primary font-semibold" 
@@ -74,7 +94,7 @@ export const Footer = ({ variant = "static" }: FooterProps) => {
                     }`}
                   >
                     Future Vision
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
