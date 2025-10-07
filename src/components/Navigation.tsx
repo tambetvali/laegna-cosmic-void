@@ -62,10 +62,18 @@ export const Navigation = ({ variant = "fixed" }: NavigationProps) => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-8">
-            <h1 className="text-2xl font-bold">
-              <span className={`transition-colors ${activeSection === "hero" ? "text-[#8B6914]" : "text-primary"}`}>Laegna</span>
+            <button
+              onClick={() => {
+                navigate("/");
+                setTimeout(() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }, 100);
+              }}
+              className="text-2xl font-bold cursor-pointer hover:opacity-80 transition-opacity"
+            >
+              <span className={`transition-colors ${activeSection === "hero" ? "text-[#7D3C1C]" : "text-primary"}`}>Laegna</span>
               <span className={`transition-colors ${activeSection === "hero" ? "text-primary" : "text-muted-foreground"}`}> Theory</span>
-            </h1>
+            </button>
             <div className="hidden md:flex items-center gap-6">
               <button
                 onClick={() => scrollToSection("infinities")}

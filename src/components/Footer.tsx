@@ -33,7 +33,7 @@ export const Footer = ({ variant = "static" }: FooterProps) => {
                     to="/background"
                     onClick={() => {
                       setTimeout(() => {
-                        document.getElementById("title")?.scrollIntoView({ behavior: "instant" });
+                        window.scrollTo({ top: 0, behavior: "instant" });
                       }, 0);
                     }}
                     className={`flex items-center gap-2 transition-colors ${
@@ -50,7 +50,7 @@ export const Footer = ({ variant = "static" }: FooterProps) => {
                     to="/analysis"
                     onClick={() => {
                       setTimeout(() => {
-                        document.getElementById("title")?.scrollIntoView({ behavior: "instant" });
+                        window.scrollTo({ top: 0, behavior: "instant" });
                       }, 0);
                     }}
                     className={`flex items-center gap-2 transition-colors ${
@@ -67,7 +67,7 @@ export const Footer = ({ variant = "static" }: FooterProps) => {
                     to="/implications"
                     onClick={() => {
                       setTimeout(() => {
-                        document.getElementById("title")?.scrollIntoView({ behavior: "instant" });
+                        window.scrollTo({ top: 0, behavior: "instant" });
                       }, 0);
                     }}
                     className={`flex items-center gap-2 transition-colors ${
@@ -84,7 +84,7 @@ export const Footer = ({ variant = "static" }: FooterProps) => {
                     to="/vision"
                     onClick={() => {
                       setTimeout(() => {
-                        document.getElementById("title")?.scrollIntoView({ behavior: "instant" });
+                        window.scrollTo({ top: 0, behavior: "instant" });
                       }, 0);
                     }}
                     className={`flex items-center gap-2 transition-colors ${
